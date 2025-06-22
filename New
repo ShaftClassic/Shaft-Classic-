@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shaft Classic | Photography</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Shaft Classic</h1>
+    <p class="tagline">Framing Life, One Shot at a Time</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Welcome to Shaft Classic</h2>
+    <p>Professional Photography That Tells Your Story</p>
+    <a href="#contact" class="btn">Book a Session</a>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <a href="https://via.placeholder.com/1000" class="lightbox"><img src="https://via.placeholder.com/300" alt="Wedding"></a>
+      <a href="https://via.placeholder.com/1001" class="lightbox"><img src="https://via.placeholder.com/300" alt="Portrait"></a>
+      <a href="https://via.placeholder.com/1002" class="lightbox"><img src="https://via.placeholder.com/300" alt="Event"></a>
+      <a href="https://via.placeholder.com/1003" class="lightbox"><img src="https://via.placeholder.com/300" alt="Product"></a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Shaft Classic</h2>
+    <p>I’m Shaft Classic, a passionate Ugandan photographer capturing life’s real moments for over 7 years. I specialize in weddings, portraits, and event coverage with a cinematic touch.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Wedding Photography</li>
+      <li>Event Coverage</li>
+      <li>Portrait Sessions</li>
+      <li>Product Shoots</li>
+    </ul>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote>"Shaft Classic captured our wedding perfectly. Every photo tells a story!" — Grace & Brian</blockquote>
+    <blockquote>"Professional and creative! Highly recommend him." — Daniel K.</blockquote>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:shaftclassic@example.com">shaftclassic@example.com</a></p>
+    <div class="social-icons">
+      <a href="https://instagram.com/shaftclassic" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/shaftclassic" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/256700000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtube.com/@shaftclassic" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shaft Classic Photography. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple lightbox preview
+    document.querySelectorAll('.lightbox').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const img = document.createElement('img');
+        img.src = this.href;
+        img.style.position = 'fixed';
+        img.style.top = '50%';
+        img.style.left = '50%';
+        img.style.transform = 'translate(-50%, -50%)';
+        img.style.maxWidth = '90%';
+        img.style.maxHeight = '90%';
+        img.style.zIndex = '9999';
+        img.style.boxShadow = '0 0 30px black';
+        img.onclick = () => document.body.removeChild(img);
+        document.body.appendChild(img);
+      });
+    });
+  </script>
+
+</body>
+</html>
+/* Existing styles remain same, add this at the bottom */
+
+.gallery a img {
+  width: 250px;
+  height: auto;
+  border: 2px solid #eee;
+  transition: 0.3s;
+}
+
+.gallery a img:hover {
+  transform: scale(1.05);
+  border-color: gold;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: gold;
+  margin: 0 10px;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: black;
+}
